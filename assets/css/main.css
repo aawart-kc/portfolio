@@ -249,7 +249,7 @@ body {
   color: var(--color-primary);
 }
 
-/* Mobile menu button */
+/* Mobile-specific styles */
 @media screen and (max-width: 968px) {
   .nav__menu {
     background-color: var(--color-white);
@@ -376,24 +376,30 @@ body {
   border-radius: var(--b-radius);
 }
 
-/* Skills --------------------------------------------------------------*/
+/* Skills Section Centering */
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures full viewport height */
+  text-align: center; /* Centers the text horizontally */
+}
+
 .skills__content {
-  width: 100%;
   max-width: 40rem;
-  justify-self: center;
-  margin-bottom: 3rem;
+  margin: 0 auto; /* Center horizontally */
 }
 
 .skills__title {
   font-size: var(--fs-md);
   font-weight: var(--fw-semibold);
-  text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .skills__content-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
   justify-content: center;
   gap: 3rem;
 }
@@ -401,33 +407,13 @@ body {
 .skills__card {
   background-color: var(--color-white);
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
   text-align: center;
   padding: 2rem;
   border-radius: var(--b-radius);
   box-shadow: var(--shadow-primary);
   transition: var(--transition);
-  position: relative; /* For the bounce effect */
-  overflow: hidden; /* To prevent overflow during animation */
-}
-
-.skills__card:hover {
-  box-shadow: var(--shadow-secondary);
-  transform: scale(1.1) rotate(2deg); /* Slight rotation */
-  animation: bounce 0.3s ease-in-out forwards; /* Bounce effect */
-}
-
-@keyframes bounce {
-  0% {
-    transform: scale(1.1);
-  }
-  50% {
-    transform: scale(1.15);
-  }
-  100% {
-    transform: scale(1.1);
-  }
 }
 
 .skills__img-wrapper {
@@ -445,34 +431,13 @@ body {
 .skills__img {
   width: 2rem;
   height: 2rem;
-  transition: transform 0.3s ease; /* For icon pulse */
-}
-
-.skills__card:hover .skills__img {
-  animation: pulse 1s infinite; /* Pulse effect */
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
+  transition: transform 0.3s ease;
 }
 
 .skills__name {
   font-size: var(--fs-md);
   font-weight: var(--fw-medium);
   color: var(--color-title);
-  transition: color 0.3s ease; /* Smooth text color change */
-}
-
-.skills__card:hover .skills__name {
-  color: var(--color-primary);
 }
 
 
@@ -872,7 +837,11 @@ body {
     margin-right: -4rem;
   }
 
+  .portfolio__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-
-
+  .blog__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
