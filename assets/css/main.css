@@ -12,7 +12,7 @@
   /*_______sabai vanda talako insta icon ko lagi__________*/
   --color-secondary-dark: #002897;
   /*_______paragraph text color ko lagi__________*/
-  --color-gray: #000;
+  --color-blackk: #000;
   /*_______name ko lagi__________*/
   --color-gray-light: #575861;
   /*_______background color ko lagi __________*/
@@ -116,7 +116,7 @@ button {
 
 a {
   text-decoration: none;
-  color: var(--color-gray);
+  color: var(--color-blackk);
 }
 
 main {
@@ -127,7 +127,7 @@ body {
   font-family: var(--font-family-primary);
   font-size: var(--fs-md);
   font-weight: var(--fw-regular);
-  color: var(--color-gray);
+  color: var(--color-blackk);
   margin-top: var(--height-header);
 }
 .container {
@@ -551,7 +551,7 @@ body {
   width: 100%;
   padding: 1.8rem 2.5rem;
   border-radius: var(--b-radius);
-  color: var(--color-gray);
+  color: var(--color-blackk);
   transition: var(--transition);
 }
 
