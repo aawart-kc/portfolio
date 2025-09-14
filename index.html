@@ -397,7 +397,7 @@
             </div>
         </div>
         <div class="footer__copyright container">
-            <p>&copy; Copyright 2025 Designed by NPX@Aawart</p>
+            <p>&copy; <span id="year"></span> Designed by NPX@Aawart</p>
         </div>
     </footer>
     <a href="#" id="scrolltop" class="scrolltop">
@@ -412,6 +412,12 @@
 
     <!--=================== Main JS ====================-->
     <script src="assets/js/main.js"></script>
+    
+<!--=================== Date ====================-->
+    <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 
 </html>
